@@ -21,6 +21,8 @@ public class HandBag extends Bag{
          * The Python equivalent is super().__init__(...)
          */
         super(color, capacity);
+        this.numberOfContents = 0;
+        this.contents = new String[this.capacity];
     }
 
     /**
