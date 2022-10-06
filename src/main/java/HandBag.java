@@ -21,8 +21,8 @@ public class HandBag extends Bag{
          * The Python equivalent is super().__init__(...)
          */
         super(color, capacity);
-        this.numberOfContents = 0;
-        this.contents = new String[this.capacity];
+        /* this.numberOfContents = 0; */
+        /* this.contents = new String[this.capacity]; */
     }
 
     /**
@@ -36,6 +36,7 @@ public class HandBag extends Bag{
          *
          * To call a method defined in a parent, you use super.method_name(...)
          */
-        super.increaseCapacity(1);
+        /* super.increaseCapacity(1); */
+        this.capacity += 1;
     }
 }
