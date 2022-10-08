@@ -36,7 +36,6 @@ public class HandBag extends Bag{
          *
          * To call a method defined in a parent, you use super.method_name(...)
          */
-        /* super.increaseCapacity(1); */
-        this.capacity += 1;
+        super.increaseCapacity(1);
     }
 }

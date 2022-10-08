@@ -82,7 +82,11 @@ public abstract class Bag {
         if(this.getNumberOfContents() < this.capacity) {
             int numItems = this.numberOfContents;
             /* obtain index of new item in the array */
-            int newItemIndex = numItems - 1;
+            int newItemIndex = 0;
+            if (numItems > 0) {
+                /* change index if contents is non-empty*/
+                newItemIndex = numItems;
+            }
             /* add item into array */
             this.contents[newItemIndex] = item;
             this.numberOfContents += 1;
@@ -104,7 +108,7 @@ public abstract class Bag {
      * @return
      */
     public String popItem() {
-        if(this.numberOfContents == 0) {
+        if (this.numberOfContents == 0) {
             return null;
         } else {
             int numItems = this.numberOfContents;
@@ -112,7 +116,7 @@ public abstract class Bag {
             int indexLastItem = numItems - 1;
             String item = this.contents[indexLastItem];
             /* remove item */
-            this.contents[indexLastItem] = "";
+            this.contents[indexLastItem] = null;
             this.numberOfContents -= 1;
             /* return item */
             return item;
